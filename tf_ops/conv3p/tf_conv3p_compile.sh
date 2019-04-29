@@ -34,7 +34,7 @@ g++ -std=c++11 -c $FILE_CPU.cpp -o ${OUT}_cpu.o -fPIC -I $TF_INC -g -O3 -fopenmp
 g++ -std=c++11 -c register_op.cpp -o register_op.o -fPIC -I $TF_INC -g -O3 $ABI_FLAG $FLAGS
 
 # Linking. From Tensorflow 1.4 somehow we need tensorflow_framework
-g++ -shared -o $OUT register_op.o ${OUT}_cuda.o ${OUT}_cpu.o -lcudart -L /usr/local/cuda/lib64/ -L$TF_LIB -ltensorflow_framework -fopenmp
+g++ -shared -o $OUT register_op.o ${OUT}_cpu.o -lcudart -L /usr/local/cuda/lib64/ -L$TF_LIB -ltensorflow_framework -fopenmp
 
 # Clean up
 rm ${OUT}_cpu.o 
