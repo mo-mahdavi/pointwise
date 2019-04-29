@@ -6,7 +6,7 @@ import util
 
 # Dataset availability check
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_DIR = os.path.join(BASE_DIR, 'data/indoor3d_sem_seg_hdf5_4096')
+DATA_DIR = os.path.join(BASE_DIR, 'data/indoor3d_sem_seg_hdf5_data')
 if not os.path.exists(DATA_DIR):
     print('Data folder {0} not found. Please run download.py.' % DATA_DIR)
     sys.exit()
