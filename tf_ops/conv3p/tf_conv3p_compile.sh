@@ -30,15 +30,15 @@ OUT=tf_conv3p.so
 
 # Both CUDA and CPU code in a single library: compile each implementation, and register op and link both into the same shared library
 g++ -std=c++11 -c $FILE_CPU.cpp -o ${OUT}_cpu.o -fPIC -I $TF_INC -g -O3 -fopenmp -DCONV_OPENMP $ABI_FLAG
-#/usr/local/cuda/bin/nvcc -std=c++11 -c $FILE_CUDA.cu -o ${OUT}_cuda.o -c -g -O3 -DGOOGLE_CUDA=1 -Xcompiler -fPIC -use_fast_math -I /usr/local/cuda/include -I $TF_INC $ABI_FLAG
+/usr/local/cuda/bin/nvcc -std=c++11 -c $FILE_CUDA.cu -o ${OUT}_cuda.o -c -g -O3 -DGOOGLE_CUDA=1 -Xcompiler -fPIC -use_fast_math -I /usr/local/cuda/include -I $TF_INC $ABI_FLAG
 g++ -std=c++11 -c register_op.cpp -o register_op.o -fPIC -I $TF_INC -g -O3 $ABI_FLAG $FLAGS
 
 # Linking. From Tensorflow 1.4 somehow we need tensorflow_framework
-#g++ -shared -o $OUT register_op.o ${OUT}_cuda.o ${OUT}_cpu.o -lcudart -L /usr/local/cuda/lib64/ -L$TF_LIB -ltensorflow_framework -fopenmp
+g++ -shared -o $OUT register_op.o ${OUT}_cuda.o ${OUT}_cpu.o -lcudart -L /usr/local/cuda/lib64/ -L$TF_LIB -ltensorflow_framework -fopenmp
 g++ -shared -o $OUT register_op.o ${OUT}_cpu.o -lcudart -L /usr/local/cuda/lib64/ -L$TF_LIB -ltensorflow_framework -fopenmp
 
 
 # Clean up
 rm ${OUT}_cpu.o 
-#rm ${OUT}_cuda.o
+rm ${OUT}_cuda.o
 
