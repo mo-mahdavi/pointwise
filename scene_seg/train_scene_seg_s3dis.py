@@ -30,6 +30,7 @@ def train(args):
         start_epoch = 0
 
     model_name = args["scene_seg"]["model"]
+    print("model nameeeeeee is " , model_name)
     model = importlib.import_module(model_name)
     print('Using model ', model_name)
 
