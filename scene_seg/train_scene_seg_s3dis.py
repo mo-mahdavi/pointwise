@@ -30,7 +30,6 @@ def train(args):
         start_epoch = 0
 
     model_name = args["scene_seg"]["model"]
-    print("model nameeeeeee is " , model_name)
     model = importlib.import_module(model_name)
     print('Using model ', model_name)
 
@@ -38,6 +37,8 @@ def train(args):
     num_points = d.num_points
     num_channels = d.num_channels
     num_class = 13
+    print('num_points: ' , num_points)
+    print('num channels: ' , num_channels)
 
     print('Categories: ', num_class)
     print('Sort cloud: ', sort_cloud)
@@ -84,7 +85,7 @@ def train(args):
             optimizer = tf.train.MomentumOptimizer(learning_rate, momentum)
             train_op = optimizer.minimize(loss, global_step=global_step)
 
-            # Save to disk
+            # Save to k
             saver = tf.train.Saver(max_to_keep=None)
 
             weight_file = "{}_snapshot_{}.tf".format(model_name, start_epoch)
@@ -106,9 +107,8 @@ def train(args):
             merged = tf.summary.merge_all()
             train_writer = tf.summary.FileWriter('log', session.graph)
 
-            for epoch in range(start_epoch, max_epoch):
+            for epoch in range(start_epoch , max_epoch):
                 print('# Epoch %d' % epoch)
-
                 # one epoch
                 total_correct = 0
                 total_seen = 0
@@ -154,7 +154,6 @@ def train(args):
                     print('Current loss       : %f' % loss_val)
                     print('Current accuracy   : %f' % (correct / float(batch_size * num_points)))
                     print('Average batch time : ', batch_time / num_seen_batches)
-
                 mean_loss = (total_loss / float(num_seen_batches))
                 mean_accuracy = (total_correct / float(total_seen))
                 mean_class_accuracy = np.mean(total_correct_class / total_seen_class)
@@ -176,7 +175,6 @@ def train(args):
                     f.write(str(datetime.datetime.now().strftime("%c")) + ', ' + \
                             str(epoch) + ', ' + str(mean_loss) + ', ' + str(mean_accuracy) + ', ' + str(mean_class_accuracy) + '\n')
                     f.close()
-
                 d.next_epoch()
 
 if __name__ == "__main__":

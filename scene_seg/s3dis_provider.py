@@ -35,19 +35,25 @@ class S3DISProvider:
             label_batch_list.append(label_batch)
         data_batches = np.concatenate(data_batch_list, 0)
         label_batches = np.concatenate(label_batch_list, 0)
-        print(data_batches.shape)
-        print(label_batches.shape)
+ #       print(data_batches.shape)
+#        print(label_batches.shape)
 
         test_area = 6
         test_area = 'Area_'+str(test_area)
         train_idxs = []
         test_idxs = []
+        thing = 0
         for i,room_name in enumerate(room_filelist):
+#            print('room name  ' , room_name)
             if test_area in room_name:
                 test_idxs.append(i)
-            else:
-                train_idxs.append(i)
-
+            elif 'Area_1' in room_name:
+                if thing == 0:
+                    train_idxs.append(i)
+                    thing = 1
+                else:
+                    thing = 0
+	
         train_data = data_batches[train_idxs,...]
         train_label = label_batches[train_idxs]
         test_data = data_batches[test_idxs,...]
