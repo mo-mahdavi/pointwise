@@ -166,6 +166,10 @@ def train(args):
                     snapshot_file = "./{}_snapshot_{}.tf".format(model_name, epoch)
                     saver.save(session, snapshot_file)
                     print('Model %s saved' % snapshot_file)
+                    my_file = open('./last.txt' , 'w')
+                    my_file.write('%d' % epoch)
+                    my_file.close()
+		    
 
                 global_step_val, learning_rate_val = session.run([global_step, learning_rate])
                 print('Global step    : ', global_step_val)
