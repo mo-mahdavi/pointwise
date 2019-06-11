@@ -6,7 +6,10 @@ import util
 import sys
 import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+print("*************** checking for ilbrary address")
+print(BASE_DIR + '/tf_ops/conv3p/tf_conv3p.so')
 conv3p_module = tf.load_op_library(BASE_DIR + '/tf_ops/conv3p/tf_conv3p.so')
+
 
 def conv3p(points_tensor, input_tensor, kernel_tensor, stride_tensor, voxel_size):
     return conv3p_module.conv3p(points_tensor, input_tensor, kernel_tensor, stride_tensor, voxel_size);
@@ -49,10 +52,10 @@ class PointConvNet:
         in_channels = input_tensor.get_shape()[2].value
 
         voxel_size = tf.constant([0.1])
-        net1 = layer(1, points_tensor, input_tensor, voxel_size, [3, 3, 3, in_channels, 9], [1, 1, 1])
-        net2 = layer(2, points_tensor, net1, voxel_size, [3, 3, 3, 9, 9], [2, 2, 2])
-        net3 = layer(3, points_tensor, net2, voxel_size, [3, 3, 3, 9, 9], [3, 3, 3])
-        net4 = layer(4, points_tensor, net3, voxel_size, [3, 3, 3, 9, 9], [4, 4, 4])
+        net1 = layer(1, points_tensor, input_tensor, voxel_size, [3, 3, 3, in_channels, 9], [1, 1, 1] , is_training=True)
+        net2 = layer(2, points_tensor, net1, voxel_size, [3, 3, 3, 9, 9], [2, 2, 2], is_training=True)
+        net3 = layer(3, points_tensor, net2, voxel_size, [3, 3, 3, 9, 9], [3, 3, 3], is_training=True)
+        net4 = layer(4, points_tensor, net3, voxel_size, [3, 3, 3, 9, 9], [4, 4, 4], is_training=True)
         concat = tf.concat([net1, net2, net3, net4], axis=2)
         net = layer(5, points_tensor, concat, voxel_size, [3, 3, 3, 36, self.num_class], [1, 1, 1])
         return net

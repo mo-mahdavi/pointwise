@@ -1,2 +1,2 @@
-model_checkpoint_path: "pointcnn_scene_seg_acsd_snapshot_6.tf"
-all_model_checkpoint_paths: "pointcnn_scene_seg_acsd_snapshot_6.tf"
+model_checkpoint_path: "pointcnn_scene_seg_acsd_snapshot_11.tf"
+all_model_checkpoint_paths: "pointcnn_scene_seg_acsd_snapshot_11.tf"
