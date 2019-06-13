@@ -1,0 +1,639 @@
+(pointwise) mmahdavi@gpu-server1:~/pointwise/scene_seg$ python eval_scene_seg_s3dis.py 14 
+*************** checking for ilbrary address
+/home/mmahdavi/pointwise/tf_ops/conv3p/tf_conv3p.so
+Using model  pointcnn_scene_seg_acsd
+(2220, 4096, 9) (2220, 4096)
+(3294, 4096, 9) (3294, 4096)
+Categories:  13
+Sort cloud:  True
+2019-06-12 18:50:31.146073: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2019-06-12 18:50:31.146227: I tensorflow/core/common_runtime/process_util.cc:69] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+Weight file ./pointcnn_scene_seg_acsd_snapshot_14.tf restored
+Batch 1 / 102
+Current accuracy   : 0.786606
+Average batch time :  29.121739327907562
+Batch 2 / 102
+Current accuracy   : 0.788940
+Average batch time :  29.183513393625617
+Batch 3 / 102
+Current accuracy   : 0.554665
+Average batch time :  28.77554672770202
+Batch 4 / 102
+Current accuracy   : 0.616661
+Average batch time :  29.296976000070572
+Batch 5 / 102
+Current accuracy   : 0.859161
+Average batch time :  29.96555078923702
+Batch 6 / 102
+Current accuracy   : 0.684372
+Average batch time :  30.40921586751938
+Batch 7 / 102
+Current accuracy   : 0.626503
+Average batch time :  30.575183884373732
+Batch 8 / 102
+Current accuracy   : 0.753571
+Average batch time :  31.317312110448256
+Batch 9 / 102
+Current accuracy   : 0.635139
+Average batch time :  31.609629201392334
+Batch 10 / 102
+Current accuracy   : 0.617630
+Average batch time :  31.782079263031484
+Batch 11 / 102
+Current accuracy   : 0.665405
+Average batch time :  31.63971455310556
+Batch 12 / 102
+Current accuracy   : 0.567352
+Average batch time :  31.60746427671984
+Batch 13 / 102
+Current accuracy   : 0.561485
+Average batch time :  31.434180185915185
+Batch 14 / 102
+Current accuracy   : 0.616447
+Average batch time :  31.333672466554813
+Batch 15 / 102
+Current accuracy   : 0.690948
+Average batch time :  31.284867177531122
+Batch 16 / 102
+Current accuracy   : 0.603195
+Average batch time :  31.278189797187224
+Batch 17 / 102
+Current accuracy   : 0.669533
+Average batch time :  31.228853959261496
+zBatch 18 / 102
+Current accuracy   : 0.691689
+Average batch time :  31.324679106991326
+Batch 19 / 102
+Current accuracy   : 0.584480
+Average batch time :  31.49291637628094
+Batch 20 / 102
+Current accuracy   : 0.665810
+Average batch time :  31.67946855360642
+Batch 21 / 102
+Current accuracy   : 0.678581
+Average batch time :  31.573143622793612
+Batch 22 / 102
+Current accuracy   : 0.616425
+Average batch time :  31.645538516427305
+Batch 23 / 102
+Current accuracy   : 0.715736
+Average batch time :  31.71120323508006
+Batch 24 / 102
+Current accuracy   : 0.771378
+Average batch time :  31.51348100773369
+Batch 25 / 102
+Current accuracy   : 0.774635
+Average batch time :  31.455762192606926
+Batch 26 / 102
+Current accuracy   : 0.894447
+Average batch time :  31.561206141844966
+Batch 27 / 102
+Current accuracy   : 0.539780
+Average batch time :  31.875859958844053
+Batch 28 / 102
+Current accuracy   : 0.677849
+Average batch time :  32.18346740418513
+Batch 29 / 102
+Current accuracy   : 0.970291
+Average batch time :  34.51469043603745
+Batch 30 / 102
+Current accuracy   : 0.772659
+Average batch time :  34.3542099851494
+Batch 31 / 102
+Current accuracy   : 0.685410
+Average batch time :  34.22296477049108
+Batch 32 / 102
+Current accuracy   : 0.694618
+Average batch time :  34.14624286320759
+Batch 33 / 102
+Current accuracy   : 0.681084
+Average batch time :  34.008449553766035
+Batch 34 / 102
+Current accuracy   : 0.762970
+Average batch time :  33.99967169169994
+Batch 35 / 102
+Current accuracy   : 0.532684
+Average batch time :  33.851754057567035
+Batch 36 / 102
+Current accuracy   : 0.577133
+Average batch time :  33.774353786268165
+Batch 37 / 102
+Current accuracy   : 0.585091
+Average batch time :  33.607702095917354
+Batch 38 / 102
+Current accuracy   : 0.585693
+Average batch time :  33.60027728533667
+Batch 39 / 102
+Current accuracy   : 0.675682
+Average batch time :  33.50684712292292
+Batch 40 / 102
+Current accuracy   : 0.579247
+Average batch time :  33.388138418458404
+Batch 41 / 102
+Current accuracy   : 0.575470
+Average batch time :  33.302910680678195
+Batch 42 / 102
+Current accuracy   : 0.637741
+Average batch time :  33.128981818400675
+Batch 43 / 102
+Current accuracy   : 0.584564
+Average batch time :  33.004082855746844
+Batch 44 / 102
+Current accuracy   : 0.687187
+Average batch time :  32.883089667694136
+Batch 45 / 102
+Current accuracy   : 0.578941
+Average batch time :  32.80587229178184
+Batch 46 / 102
+Current accuracy   : 0.563225
+Average batch time :  32.688784492485546
+Batch 47 / 102
+Current accuracy   : 0.630547
+Average batch time :  32.59264997381003
+Batch 48 / 102
+Current accuracy   : 0.632874
+Average batch time :  32.48349996838564
+Batch 49 / 102
+Current accuracy   : 0.626427
+Average batch time :  32.373900886320946
+Batch 50 / 102
+Current accuracy   : 0.619850
+Average batch time :  32.3234111212939
+Batch 51 / 102
+Current accuracy   : 0.595917
+Average batch time :  32.22391038614453
+Batch 52 / 102
+Current accuracy   : 0.669746
+Average batch time :  32.188331058284696
+Batch 53 / 102
+Current accuracy   : 0.604553
+Average batch time :  32.13207715841116
+Batch 54 / 102
+Current accuracy   : 0.563728
+Average batch time :  32.03168909486245
+Batch 55 / 102
+Current accuracy   : 0.700912
+Average batch time :  32.01008317582309
+Batch 56 / 102
+Current accuracy   : 0.554428
+Average batch time :  31.975541944316188
+Batch 57 / 102
+Current accuracy   : 0.653053
+Average batch time :  31.930515714251158
+Batch 58 / 102
+Current accuracy   : 0.495041
+Average batch time :  31.88163233220834
+Batch 59 / 102
+Current accuracy   : 0.593224
+Average batch time :  31.821909018681716
+Batch 60 / 102
+Current accuracy   : 0.557068
+Average batch time :  31.77167150499299
+Batch 61 / 102
+Current accuracy   : 0.513885
+Average batch time :  31.680730165699956
+Batch 62 / 102
+Current accuracy   : 0.703682
+Average batch time :  31.6567255019721
+Batch 63 / 102
+Current accuracy   : 0.605377
+Average batch time :  31.61278865172986
+Batch 64 / 102
+Current accuracy   : 0.730316
+Average batch time :  31.57073413391481
+Batch 65 / 102
+Current accuracy   : 0.646103
+Average batch time :  31.535523611966234
+Batch 66 / 102
+Current accuracy   : 0.665123
+Average batch time :  31.523164689738415
+Batch 67 / 102
+Current accuracy   : 0.561058
+Average batch time :  31.572453975010273
+Batch 68 / 102
+Current accuracy   : 0.530533
+Average batch time :  31.48791781760862
+Batch 69 / 102
+Current accuracy   : 0.683113
+Average batch time :  31.53103481279011
+Batch 70 / 102
+Current accuracy   : 0.610901
+Average batch time :  31.503016061309193
+Batch 71 / 102
+Current accuracy   : 0.664902
+Average batch time :  31.463531921237287
+Batch 72 / 102
+Current accuracy   : 0.621834
+Average batch time :  31.428146854172358
+Batch 73 / 102
+Current accuracy   : 0.596268
+Average batch time :  31.4043978357509
+Batch 74 / 102
+Current accuracy   : 0.643188
+Average batch time :  31.36670458888182
+Batch 75 / 102
+Current accuracy   : 0.633446
+Average batch time :  31.321973899478714
+Batch 76 / 102
+Current accuracy   : 0.697289
+Average batch time :  31.31358320496388
+Batch 77 / 102
+Current accuracy   : 0.603653
+Average batch time :  31.260678160306696
+Batch 78 / 102
+Current accuracy   : 0.675491
+Average batch time :  31.231163270437182
+Batch 79 / 102
+Current accuracy   : 0.641266
+Average batch time :  31.213080959418154
+Batch 80 / 102
+Current accuracy   : 0.576157
+Average batch time :  31.188737278571352
+Batch 81 / 102
+Current accuracy   : 0.772369
+Average batch time :  31.1787914911538
+Batch 82 / 102
+Current accuracy   : 0.603508
+Average batch time :  31.15206651766671
+Batch 83 / 102
+Current accuracy   : 0.802330
+Average batch time :  31.154239581875412
+Batch 84 / 102
+Current accuracy   : 0.573906
+Average batch time :  31.109569616793166
+Batch 85 / 102
+Current accuracy   : 0.683434
+Average batch time :  31.085858311263078
+Batch 86 / 102
+Current accuracy   : 0.586380
+Average batch time :  31.06566349761344
+Batch 87 / 102
+Current accuracy   : 0.615250
+Average batch time :  31.05992754458867
+Batch 88 / 102
+Current accuracy   : 0.581276
+Average batch time :  31.021864144914698
+Batch 89 / 102
+Current accuracy   : 0.660072
+Average batch time :  31.019690656867088
+Batch 90 / 102
+Current accuracy   : 0.754906
+Average batch time :  31.036351785850194
+Batch 91 / 102
+Current accuracy   : 0.552910
+Average batch time :  30.992120315719927
+Batch 92 / 102
+Current accuracy   : 0.532242
+Average batch time :  30.95285633797555
+Batch 93 / 102
+Current accuracy   : 0.689720
+Average batch time :  30.95436478237952
+Batch 94 / 102
+Current accuracy   : 0.672028
+Average batch time :  30.94707494881004
+Batch 95 / 102
+Current accuracy   : 0.603722
+Average batch time :  30.933950369275713
+Batch 96 / 102
+Current accuracy   : 0.598465
+Average batch time :  30.937831912810605
+Batch 97 / 102
+Current accuracy   : 0.890160
+Average batch time :  30.99895031408397
+Batch 98 / 102
+Current accuracy   : 0.856720
+Average batch time :  31.067169646162313
+Batch 99 / 102
+Current accuracy   : 0.857826
+Average batch time :  31.12327085781579
+Batch 100 / 102
+Current accuracy   : 0.864258
+Average batch time :  31.180247128922492
+Batch 101 / 102
+Current accuracy   : 0.868965
+Average batch time :  31.239973393739156
+Batch 102 / 102
+Current accuracy   : 0.696289
+Average batch time :  31.27772350899656
+Mean accuracy      : 0.657410
+Avg class accuracy : 0.285574
+(pointwise) mmahdavi@gpu-server1:~/pointwise/scene_seg$ python eval_scene_seg_s3dis.py 14 
+*************** checking for ilbrary address
+/home/mmahdavi/pointwise/tf_ops/conv3p/tf_conv3p.so
+Using model  pointcnn_scene_seg_acsd
+(2220, 4096, 9) (2220, 4096)
+(3294, 4096, 9) (3294, 4096)
+Categories:  13
+Sort cloud:  True
+2019-06-12 18:50:31.146073: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2019-06-12 18:50:31.146227: I tensorflow/core/common_runtime/process_util.cc:69] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+Weight file ./pointcnn_scene_seg_acsd_snapshot_14.tf restored
+Batch 1 / 102
+Current accuracy   : 0.786606
+Average batch time :  29.121739327907562
+Batch 2 / 102
+Current accuracy   : 0.788940
+Average batch time :  29.183513393625617
+Batch 3 / 102
+Current accuracy   : 0.554665
+Average batch time :  28.77554672770202
+Batch 4 / 102
+Current accuracy   : 0.616661
+Average batch time :  29.296976000070572
+Batch 5 / 102
+Current accuracy   : 0.859161
+Average batch time :  29.96555078923702
+Batch 6 / 102
+Current accuracy   : 0.684372
+Average batch time :  30.40921586751938
+Batch 7 / 102
+Current accuracy   : 0.626503
+Average batch time :  30.575183884373732
+Batch 8 / 102
+Current accuracy   : 0.753571
+Average batch time :  31.317312110448256
+Batch 9 / 102
+Current accuracy   : 0.635139
+Average batch time :  31.609629201392334
+Batch 10 / 102
+Current accuracy   : 0.617630
+Average batch time :  31.782079263031484
+Batch 11 / 102
+Current accuracy   : 0.665405
+Average batch time :  31.63971455310556
+Batch 12 / 102
+Current accuracy   : 0.567352
+Average batch time :  31.60746427671984
+Batch 13 / 102
+Current accuracy   : 0.561485
+Average batch time :  31.434180185915185
+Batch 14 / 102
+Current accuracy   : 0.616447
+Average batch time :  31.333672466554813
+Batch 15 / 102
+Current accuracy   : 0.690948
+Average batch time :  31.284867177531122
+Batch 16 / 102
+Current accuracy   : 0.603195
+Average batch time :  31.278189797187224
+Batch 17 / 102
+Current accuracy   : 0.669533
+Average batch time :  31.228853959261496
+zBatch 18 / 102
+Current accuracy   : 0.691689
+Average batch time :  31.324679106991326
+Batch 19 / 102
+Current accuracy   : 0.584480
+Average batch time :  31.49291637628094
+Batch 20 / 102
+Current accuracy   : 0.665810
+Average batch time :  31.67946855360642
+Batch 21 / 102
+Current accuracy   : 0.678581
+Average batch time :  31.573143622793612
+Batch 22 / 102
+Current accuracy   : 0.616425
+Average batch time :  31.645538516427305
+Batch 23 / 102
+Current accuracy   : 0.715736
+Average batch time :  31.71120323508006
+Batch 24 / 102
+Current accuracy   : 0.771378
+Average batch time :  31.51348100773369
+Batch 25 / 102
+Current accuracy   : 0.774635
+Average batch time :  31.455762192606926
+Batch 26 / 102
+Current accuracy   : 0.894447
+Average batch time :  31.561206141844966
+Batch 27 / 102
+Current accuracy   : 0.539780
+Average batch time :  31.875859958844053
+Batch 28 / 102
+Current accuracy   : 0.677849
+Average batch time :  32.18346740418513
+Batch 29 / 102
+Current accuracy   : 0.970291
+Average batch time :  34.51469043603745
+Batch 30 / 102
+Current accuracy   : 0.772659
+Average batch time :  34.3542099851494
+Batch 31 / 102
+Current accuracy   : 0.685410
+Average batch time :  34.22296477049108
+Batch 32 / 102
+Current accuracy   : 0.694618
+Average batch time :  34.14624286320759
+Batch 33 / 102
+Current accuracy   : 0.681084
+Average batch time :  34.008449553766035
+Batch 34 / 102
+Current accuracy   : 0.762970
+Average batch time :  33.99967169169994
+Batch 35 / 102
+Current accuracy   : 0.532684
+Average batch time :  33.851754057567035
+Batch 36 / 102
+Current accuracy   : 0.577133
+Average batch time :  33.774353786268165
+Batch 37 / 102
+Current accuracy   : 0.585091
+Average batch time :  33.607702095917354
+Batch 38 / 102
+Current accuracy   : 0.585693
+Average batch time :  33.60027728533667
+Batch 39 / 102
+Current accuracy   : 0.675682
+Average batch time :  33.50684712292292
+Batch 40 / 102
+Current accuracy   : 0.579247
+Average batch time :  33.388138418458404
+Batch 41 / 102
+Current accuracy   : 0.575470
+Average batch time :  33.302910680678195
+Batch 42 / 102
+Current accuracy   : 0.637741
+Average batch time :  33.128981818400675
+Batch 43 / 102
+Current accuracy   : 0.584564
+Average batch time :  33.004082855746844
+Batch 44 / 102
+Current accuracy   : 0.687187
+Average batch time :  32.883089667694136
+Batch 45 / 102
+Current accuracy   : 0.578941
+Average batch time :  32.80587229178184
+Batch 46 / 102
+Current accuracy   : 0.563225
+Average batch time :  32.688784492485546
+Batch 47 / 102
+Current accuracy   : 0.630547
+Average batch time :  32.59264997381003
+Batch 48 / 102
+Current accuracy   : 0.632874
+Average batch time :  32.48349996838564
+Batch 49 / 102
+Current accuracy   : 0.626427
+Average batch time :  32.373900886320946
+Batch 50 / 102
+Current accuracy   : 0.619850
+Average batch time :  32.3234111212939
+Batch 51 / 102
+Current accuracy   : 0.595917
+Average batch time :  32.22391038614453
+Batch 52 / 102
+Current accuracy   : 0.669746
+Average batch time :  32.188331058284696
+Batch 53 / 102
+Current accuracy   : 0.604553
+Average batch time :  32.13207715841116
+Batch 54 / 102
+Current accuracy   : 0.563728
+Average batch time :  32.03168909486245
+Batch 55 / 102
+Current accuracy   : 0.700912
+Average batch time :  32.01008317582309
+Batch 56 / 102
+Current accuracy   : 0.554428
+Average batch time :  31.975541944316188
+Batch 57 / 102
+Current accuracy   : 0.653053
+Average batch time :  31.930515714251158
+Batch 58 / 102
+Current accuracy   : 0.495041
+Average batch time :  31.88163233220834
+Batch 59 / 102
+Current accuracy   : 0.593224
+Average batch time :  31.821909018681716
+Batch 60 / 102
+Current accuracy   : 0.557068
+Average batch time :  31.77167150499299
+Batch 61 / 102
+Current accuracy   : 0.513885
+Average batch time :  31.680730165699956
+Batch 62 / 102
+Current accuracy   : 0.703682
+Average batch time :  31.6567255019721
+Batch 63 / 102
+Current accuracy   : 0.605377
+Average batch time :  31.61278865172986
+Batch 64 / 102
+Current accuracy   : 0.730316
+Average batch time :  31.57073413391481
+Batch 65 / 102
+Current accuracy   : 0.646103
+Average batch time :  31.535523611966234
+Batch 66 / 102
+Current accuracy   : 0.665123
+Average batch time :  31.523164689738415
+Batch 67 / 102
+Current accuracy   : 0.561058
+Average batch time :  31.572453975010273
+Batch 68 / 102
+Current accuracy   : 0.530533
+Average batch time :  31.48791781760862
+Batch 69 / 102
+Current accuracy   : 0.683113
+Average batch time :  31.53103481279011
+Batch 70 / 102
+Current accuracy   : 0.610901
+Average batch time :  31.503016061309193
+Batch 71 / 102
+Current accuracy   : 0.664902
+Average batch time :  31.463531921237287
+Batch 72 / 102
+Current accuracy   : 0.621834
+Average batch time :  31.428146854172358
+Batch 73 / 102
+Current accuracy   : 0.596268
+Average batch time :  31.4043978357509
+Batch 74 / 102
+Current accuracy   : 0.643188
+Average batch time :  31.36670458888182
+Batch 75 / 102
+Current accuracy   : 0.633446
+Average batch time :  31.321973899478714
+Batch 76 / 102
+Current accuracy   : 0.697289
+Average batch time :  31.31358320496388
+Batch 77 / 102
+Current accuracy   : 0.603653
+Average batch time :  31.260678160306696
+Batch 78 / 102
+Current accuracy   : 0.675491
+Average batch time :  31.231163270437182
+Batch 79 / 102
+Current accuracy   : 0.641266
+Average batch time :  31.213080959418154
+Batch 80 / 102
+Current accuracy   : 0.576157
+Average batch time :  31.188737278571352
+Batch 81 / 102
+Current accuracy   : 0.772369
+Average batch time :  31.1787914911538
+Batch 82 / 102
+Current accuracy   : 0.603508
+Average batch time :  31.15206651766671
+Batch 83 / 102
+Current accuracy   : 0.802330
+Average batch time :  31.154239581875412
+Batch 84 / 102
+Current accuracy   : 0.573906
+Average batch time :  31.109569616793166
+Batch 85 / 102
+Current accuracy   : 0.683434
+Average batch time :  31.085858311263078
+Batch 86 / 102
+Current accuracy   : 0.586380
+Average batch time :  31.06566349761344
+Batch 87 / 102
+Current accuracy   : 0.615250
+Average batch time :  31.05992754458867
+Batch 88 / 102
+Current accuracy   : 0.581276
+Average batch time :  31.021864144914698
+Batch 89 / 102
+Current accuracy   : 0.660072
+Average batch time :  31.019690656867088
+Batch 90 / 102
+Current accuracy   : 0.754906
+Average batch time :  31.036351785850194
+Batch 91 / 102
+Current accuracy   : 0.552910
+Average batch time :  30.992120315719927
+Batch 92 / 102
+Current accuracy   : 0.532242
+Average batch time :  30.95285633797555
+Batch 93 / 102
+Current accuracy   : 0.689720
+Average batch time :  30.95436478237952
+Batch 94 / 102
+Current accuracy   : 0.672028
+Average batch time :  30.94707494881004
+Batch 95 / 102
+Current accuracy   : 0.603722
+Average batch time :  30.933950369275713
+Batch 96 / 102
+Current accuracy   : 0.598465
+Average batch time :  30.937831912810605
+Batch 97 / 102
+Current accuracy   : 0.890160
+Average batch time :  30.99895031408397
+Batch 98 / 102
+Current accuracy   : 0.856720
+Average batch time :  31.067169646162313
+Batch 99 / 102
+Current accuracy   : 0.857826
+Average batch time :  31.12327085781579
+Batch 100 / 102
+Current accuracy   : 0.864258
+Average batch time :  31.180247128922492
+Batch 101 / 102
+Current accuracy   : 0.868965
+Average batch time :  31.239973393739156
+Batch 102 / 102
+Current accuracy   : 0.696289
+Average batch time :  31.27772350899656
+Mean accuracy      : 0.657410
+Avg class accuracy : 0.285574
+
