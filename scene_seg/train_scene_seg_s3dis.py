@@ -179,7 +179,7 @@ def train(args):
                     f.write(str(datetime.datetime.now().strftime("%c")) + ', ' + \
                             str(epoch) + ', ' + str(mean_loss) + ', ' + str(mean_accuracy) + ', ' + str(mean_class_accuracy) + '\n')
                     f.close()
-                #d.next_epoch()
+                d.next_epoch()
 
 if __name__ == "__main__":
     args = util.parse_arguments("../param.json")

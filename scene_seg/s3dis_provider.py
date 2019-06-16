@@ -47,7 +47,7 @@ class S3DISProvider:
 #            print('room name  ' , room_name)
             if test_area in room_name:
                 test_idxs.append(i)
-            elif 'Area_2' in room_name:
+            elif 'Area_3' in room_name:
                 if thing == 0:
                     train_idxs.append(i)
                     thing = 1
