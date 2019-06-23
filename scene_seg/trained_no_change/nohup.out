@@ -1,0 +1,252 @@
+hello
+hello
+29
+*************** checking for ilbrary address
+/home/mmahdavi/pointwise/tf_ops/conv3p/tf_conv3p.so
+Using model  pointcnn_scene_seg_acsd
+(1831, 4096, 9) (1831, 4096)
+(3294, 4096, 9) (3294, 4096)
+num_points:  4096
+num channels:  9
+Categories:  13
+Sort cloud:  True
+Using device /gpu:0
+2019-06-17 04:26:59.200346: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2019-06-17 04:26:59.200453: I tensorflow/core/common_runtime/process_util.cc:69] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+Weight file pointcnn_scene_seg_acsd_snapshot_29.tf restored
+# Epoch 30
+Batch 1 / 36
+Current loss       : 0.779378
+Current accuracy   : 0.762007
+Average batch time :  141.65092619508505
+Batch 2 / 36
+Current loss       : 1.019344
+Current accuracy   : 0.701372
+Average batch time :  136.17894000560045
+Batch 3 / 36
+Current loss       : 1.010139
+Current accuracy   : 0.693608
+Average batch time :  139.34644488307336
+Batch 4 / 36
+Current loss       : 0.920652
+Current accuracy   : 0.725020
+Average batch time :  136.81359422719106
+Batch 5 / 36
+Current loss       : 0.941698
+Current accuracy   : 0.710063
+Average batch time :  136.16047431081535
+Batch 6 / 36
+Current loss       : 0.830854
+Current accuracy   : 0.747334
+Average batch time :  134.96561353094876
+Batch 7 / 36
+Current loss       : 0.939344
+Current accuracy   : 0.691929
+Average batch time :  137.02444838892137
+Batch 8 / 36
+Current loss       : 0.899504
+Current accuracy   : 0.714102
+Average batch time :  137.47168653085828
+Batch 9 / 36
+Current loss       : 0.917725
+Current accuracy   : 0.723540
+Average batch time :  136.42846198731826
+Batch 10 / 36
+Current loss       : 0.981856
+Current accuracy   : 0.680986
+Average batch time :  136.38717370647936
+Batch 11 / 36
+Current loss       : 0.788340
+Current accuracy   : 0.750601
+Average batch time :  137.68102129159325
+Batch 12 / 36
+Current loss       : 0.913673
+Current accuracy   : 0.709141
+Average batch time :  137.20925705895448
+Batch 13 / 36
+Current loss       : 0.893388
+Current accuracy   : 0.721562
+Average batch time :  137.8432780575867
+Batch 14 / 36
+Current loss       : 0.904355
+Current accuracy   : 0.704863
+Average batch time :  137.76420940924436
+Batch 15 / 36
+Current loss       : 0.910021
+Current accuracy   : 0.696846
+Average batch time :  137.80582031371694
+Batch 16 / 36
+Current loss       : 0.916107
+Current accuracy   : 0.703340
+Average batch time :  137.931550302892
+Batch 17 / 36
+Current loss       : 1.229717
+Current accuracy   : 0.650566
+Average batch time :  137.76332574250068
+Batch 18 / 36
+Current loss       : 0.920401
+Current accuracy   : 0.698159
+Average batch time :  137.35779672260912
+Batch 19 / 36
+Current loss       : 1.015198
+Current accuracy   : 0.664712
+Average batch time :  137.39839376058234
+Batch 20 / 36
+Current loss       : 1.233219
+Current accuracy   : 0.626216
+Average batch time :  137.49443750083447
+Batch 21 / 36
+Current loss       : 1.023563
+Current accuracy   : 0.684941
+Average batch time :  137.72155885433867
+Batch 22 / 36
+Current loss       : 0.916172
+Current accuracy   : 0.711426
+Average batch time :  137.164327763275
+Batch 23 / 36
+Current loss       : 1.100587
+Current accuracy   : 0.660469
+Average batch time :  137.9030114830998
+Batch 24 / 36
+Current loss       : 0.952985
+Current accuracy   : 0.691895
+Average batch time :  137.76582204224542
+Batch 25 / 36
+Current loss       : 0.804157
+Current accuracy   : 0.735757
+Average batch time :  138.56281766302882
+Batch 26 / 36
+Current loss       : 1.138353
+Current accuracy   : 0.656689
+Average batch time :  138.53479036445228
+Batch 27 / 36
+Current loss       : 0.853883
+Current accuracy   : 0.751660
+Average batch time :  138.167715659641
+Batch 28 / 36
+Current loss       : 0.847165
+Current accuracy   : 0.725605
+Average batch time :  138.20189775785963
+Batch 29 / 36
+Current loss       : 0.995918
+Current accuracy   : 0.698843
+Average batch time :  138.2393221499334
+Batch 30 / 36
+Current loss       : 0.875782
+Current accuracy   : 0.705557
+Average batch time :  138.65242733620107
+Batch 31 / 36
+Current loss       : 1.087753
+Current accuracy   : 0.680391
+Average batch time :  138.50377483545773
+Batch 32 / 36
+Current loss       : 0.796489
+Current accuracy   : 0.751011
+Average batch time :  138.71473200048786
+Batch 33 / 36
+Current loss       : 0.963551
+Current accuracy   : 0.704263
+Average batch time :  138.5943563883052
+Batch 34 / 36
+Current loss       : 0.861383
+Current accuracy   : 0.723296
+Average batch time :  138.56827142330653
+Batch 35 / 36
+Current loss       : 1.058766
+Current accuracy   : 0.664912
+Average batch time :  138.47692457581206
+Mean loss          : 0.947600
+Mean accuracy      : 0.704018
+Avg class accuracy : 0.313490
+Model ./pointcnn_scene_seg_acsd_snapshot_30.tf saved
+Global step    :  1024
+Learning rate  :  0.001
+# Epoch 31
+Batch 1 / 36
+Current loss       : 0.735887
+Current accuracy   : 0.799326
+Average batch time :  135.17163139022887
+Batch 2 / 36
+Current loss       : 0.972306
+Current accuracy   : 0.690532
+Average batch time :  139.333930330351
+Batch 3 / 36
+Current loss       : 1.135903
+Current accuracy   : 0.639038
+Average batch time :  137.72821394602457
+Batch 4 / 36
+Current loss       : 0.866759
+Current accuracy   : 0.735698
+Average batch time :  137.6150262299925
+Batch 5 / 36
+Current loss       : 0.962321
+Current accuracy   : 0.690669
+Average batch time :  137.02801750861107
+Batch 6 / 36
+Current loss       : 0.905869
+Current accuracy   : 0.729873
+Average batch time :  135.87008752177158
+Batch 7 / 36
+Current loss       : 0.970009
+Current accuracy   : 0.694180
+Average batch time :  135.104296386508
+Batch 8 / 36
+Current loss       : 0.875736
+Current accuracy   : 0.724507
+Average batch time :  136.21264359075576
+Batch 9 / 36
+Current loss       : 0.830211
+Current accuracy   : 0.735088
+Average batch time :  136.2343605166922
+Batch 10 / 36
+Current loss       : 0.983550
+Current accuracy   : 0.668745
+Average batch time :  136.3594596279785
+Batch 11 / 36
+Current loss       : 0.846826
+Current accuracy   : 0.745752
+Average batch time :  136.51864074187523
+Batch 12 / 36
+Current loss       : 0.932205
+Current accuracy   : 0.709038
+Average batch time :  135.7635329149974
+Batch 13 / 36
+Current loss       : 0.933204
+Current accuracy   : 0.721870
+Average batch time :  136.27784999646246
+Batch 14 / 36
+Current loss       : 0.732574
+Current accuracy   : 0.741445
+Average batch time :  136.78121983565921
+Batch 15 / 36
+Current loss       : 0.842969
+Current accuracy   : 0.744023
+Average batch time :  136.77962905280293
+Batch 16 / 36
+Current loss       : 0.897327
+Current accuracy   : 0.712983
+Average batch time :  136.3271301649511
+Batch 17 / 36
+Current loss       : 0.796287
+Current accuracy   : 0.742695
+Average batch time :  136.47157336486612
+Batch 18 / 36
+Current loss       : 1.005419
+Current accuracy   : 0.684004
+Average batch time :  136.55365361769995
+Batch 19 / 36
+Current loss       : 0.853354
+Current accuracy   : 0.714121
+Average batch time :  136.84940284686652
+Batch 20 / 36
+Current loss       : 0.867192
+Current accuracy   : 0.711333
+Average batch time :  136.65409286655486
+Batch 21 / 36
+Current loss       : 0.737550
+Current accuracy   : 0.751138
+Average batch time :  136.94930528831622
+srun: forcing job termination
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** STEP 5232.0 ON gpu-server1 CANCELLED AT 2019-06-17T06:38:58 ***
+srun: error: gpu-server1: task 0: Killed

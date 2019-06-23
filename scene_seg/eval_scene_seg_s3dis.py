@@ -89,6 +89,7 @@ def eval(args):
 
                 correct = np.sum(pred_label == gt_label)
                 total_correct += correct
+                print('num_points*********** ' , num_points)
                 total_seen += batch_size * num_points
                                 
                 for i in range(batch_size):

@@ -52,12 +52,12 @@ class PointConvNet:
         in_channels = input_tensor.get_shape()[2].value
 
         voxel_size = tf.constant([0.1])
-        net1 = layer(1, points_tensor, input_tensor, voxel_size, [3, 3, 3, in_channels, 9], [1, 1, 1] , is_training=True)
-        net2 = layer(2, points_tensor, net1, voxel_size, [3, 3, 3, 9, 9], [2, 2, 2], is_training=True)
-        net3 = layer(3, points_tensor, net2, voxel_size, [3, 3, 3, 9, 9], [3, 3, 3], is_training=True)
-        net4 = layer(4, points_tensor, net3, voxel_size, [3, 3, 3, 9, 9], [4, 4, 4], is_training=True)
+        net1 = layer(1, points_tensor, input_tensor, tf.constant([0.01]), [3, 3, 3, in_channels, 9], [1, 1, 1] , is_training=True)
+        net2 = layer(2, points_tensor, net1, tf.constant([0.05]), [3, 3, 3, 9, 9], [2, 2, 2], is_training=True)
+        net3 = layer(3, points_tensor, net2, tf.constant([0.1]), [3, 3, 3, 9, 9], [3, 3, 3], is_training=True)
+        net4 = layer(4, points_tensor, net3, tf.constant([0.15]), [3, 3, 3, 9, 9], [4, 4, 4], is_training=True)
         concat = tf.concat([net1, net2, net3, net4], axis=2)
-        net = layer(5, points_tensor, concat, voxel_size, [3, 3, 3, 36, self.num_class], [1, 1, 1])
+        net = layer(5, points_tensor, concat, tf.constant([0.1]), [3, 3, 3, 36, self.num_class], [1, 1, 1])
         return net
 
     def loss(self, logits, labels):
