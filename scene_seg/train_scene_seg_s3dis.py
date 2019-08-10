@@ -5,7 +5,6 @@ import os.path
 import sys
 import timeit
 import datetime
-import open3d as o3d
 
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -123,17 +122,6 @@ def train(args):
                 
                 while True:
                     points, points_data, gt_label = d.get_batch_point_cloud()
-                    #TODO surface normal
-                    for i in range(0 , points.shape[0]):
-                        pcd = o3d.PointCloud()
-                        pcd.points = o3d.Vector3dVector(points[i][:][:])
-                        o3d.geometery.estimate_normals(pcd, search_param=o3d.geometry.KDTreeSearchParamHybrid(radius=0.1 , max_nn=30))
-                        o3d.geometry.orient_normals_towards_camera_location(pcd , camera_location=array([0., 0., 0.]))
-                        points_data[i][:][:] = np.c_(points_data[i][:][:], pcd.normals)
-
-                    print(points_data.shape)
-
-                    print(np.asarray(pcd.normals))
                     tic = timeit.default_timer()
                     feed_dict = {
                         batch_points_placeholder : points,

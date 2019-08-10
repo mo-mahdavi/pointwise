@@ -3,6 +3,7 @@ import sys
 import numpy as np
 import h5py
 import util
+import open3d as o3d
 
 # Dataset availability check
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -35,24 +36,30 @@ class S3DISProvider:
             label_batch_list.append(label_batch)
         data_batches = np.concatenate(data_batch_list, 0)
         label_batches = np.concatenate(label_batch_list, 0)
- #       print(data_batches.shape)
+#        print('****shape of data batches : ' , data_batches.shape)
 #        print(label_batches.shape)
-
+        #surface normal
+        new_data_batches = np.zeros((data_batches.shape[0] , 4096 , 12))
+        for i in range(0 , data_batches.shape[0]):
+            pcd = o3d.PointCloud()
+            pcd.points = o3d.Vector3dVector(data_batches[i , : , 0:3])
+            o3d.geometry.estimate_normals(pcd, search_param=o3d.geometry.KDTreeSearchParamHybrid(radius=0.1 , max_nn=30))
+            o3d.geometry.orient_normals_towards_camera_location(pcd , camera_location=np.array([0., 0., 0.]))
+            new_data_batches[i] = np.c_[data_batches[i , : , :], np.asarray(pcd.normals)]
+        data_batches = new_data_batches
+        print('done adding normals')
         test_area = 6
         test_area = 'Area_'+str(test_area)
+        #test_area = 'Area_6_office_1'
         train_idxs = []
         test_idxs = []
         thing = 0
         for i,room_name in enumerate(room_filelist):
-#            print('room name  ' , room_name)
+            #print('room name  ' , room_name)
             if test_area in room_name:
                 test_idxs.append(i)
-            elif 'Area_1' in room_name:
-                if thing == 0:
-                    train_idxs.append(i)
-                    thing = 1
-                else:
-                    thing = 0
+            else:
+                train_idxs.append(i)
 	
         train_data = data_batches[train_idxs,...]
         train_label = label_batches[train_idxs]
