@@ -5,6 +5,8 @@ import os.path
 import sys
 import timeit
 import datetime
+import open3d as o3d
+
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 PARENT_DIR = os.path.dirname(BASE_DIR)
@@ -107,7 +109,7 @@ def train(args):
             merged = tf.summary.merge_all()
             train_writer = tf.summary.FileWriter('log', session.graph)
 
-            for epoch in range(start_epoch , max_epoch):
+            for epoch in range(start_epoch , start_epoch + 33):
                 print('# Epoch %d' % epoch)
                 # one epoch
                 total_correct = 0
@@ -121,7 +123,16 @@ def train(args):
                 
                 while True:
                     points, points_data, gt_label = d.get_batch_point_cloud()
-
+                    #print(points[0][0])
+                    #print(points_data[0][0])
+                    #print('8888888888888888888888888888888888')
+                    #TODO surface normal
+                    pcd = o3d.PointCloud()
+                    print(points.shape)
+                    pcd.points = o3d.Vector3dVector(points)   
+                    o3d.geometery.estimate_normals(pcd , search_param=o3d.geometry.KDTreeSearchParamHybrid(radius=0.1 , max_nn=30))
+                    open3d.geometry.orient_normals_towards_camera_location(pcd , camera_location=array([0., 0., 0.]))
+                    print(np.asarray(pcd.normals))
                     tic = timeit.default_timer()
                     feed_dict = {
                         batch_points_placeholder : points,
@@ -167,7 +178,7 @@ def train(args):
                     saver.save(session, snapshot_file)
                     print('Model %s saved' % snapshot_file)
                     my_file = open('./last.txt' , 'w')
-                    my_file.write('%d' % epoch)
+                    my_file.write('%d\n' % epoch)
                     my_file.close()
 		    
 
